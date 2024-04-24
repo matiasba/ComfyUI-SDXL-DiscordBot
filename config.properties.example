@@ -12,10 +12,17 @@ SERVER_ADDRESS=127.0.0.1:8188
 
 [LOCAL_TEXT2IMG]
 #CONFIG=comfyUI-workflows/text2img_config.json
+CONFIG=comfyUI-workflows\fast_text2img_config.json
 CONFIG=comfyUI-workflows/fast_text2img_config.json
 PROMPT_NODES=6
 NEG_PROMPT_NODES=7
 RAND_SEED_NODES=
+
+[LOCAL_TEXT2IMG]
+CONFIG=comfyUI-workflows/text2img_config.json
+PROMPT_NODES=6,12
+NEG_PROMPT_NODES=7,13
+RAND_SEED_NODES=17,20
 
 [LOCAL_IMG2IMG]
 CONFIG=comfyUI-workflows/img2img_config.json

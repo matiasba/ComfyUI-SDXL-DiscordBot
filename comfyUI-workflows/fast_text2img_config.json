@@ -109,5 +109,15 @@
       ]
     },
     "class_type": "LoraLoader"
+  },
+  "29": {
+    "inputs": {
+      "filename_prefix": "final_output",
+      "images": [
+        "8",
+        0
+      ]
+    },
+    "class_type": "SaveImage"
   }
 }
