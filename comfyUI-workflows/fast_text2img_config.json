@@ -1,0 +1,113 @@
+{
+  "5": {
+    "inputs": {
+      "width": 1024,
+      "height": 1024,
+      "batch_size": 4
+    },
+    "class_type": "EmptyLatentImage"
+  },
+  "6": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "28",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "7": {
+    "inputs": {
+      "text": "",
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "CLIPTextEncode"
+  },
+  "8": {
+    "inputs": {
+      "samples": [
+        "13",
+        0
+      ],
+      "vae": [
+        "20",
+        2
+      ]
+    },
+    "class_type": "VAEDecode"
+  },
+  "13": {
+    "inputs": {
+      "add_noise": true,
+      "noise_seed": 1,
+      "cfg": 1.5,
+      "model": [
+        "20",
+        0
+      ],
+      "positive": [
+        "6",
+        0
+      ],
+      "negative": [
+        "7",
+        0
+      ],
+      "sampler": [
+        "14",
+        0
+      ],
+      "sigmas": [
+        "22",
+        0
+      ],
+      "latent_image": [
+        "5",
+        0
+      ]
+    },
+    "class_type": "SamplerCustom"
+  },
+  "14": {
+    "inputs": {
+      "sampler_name": "lcm"
+    },
+    "class_type": "KSamplerSelect"
+  },
+  "20": {
+    "inputs": {
+      "ckpt_name": "SDXL-TURBO/sd_xl_turbo_1.0_fp16.safetensors"
+    },
+    "class_type": "CheckpointLoaderSimple"
+  },
+  "22": {
+    "inputs": {
+      "steps": 9,
+      "model": [
+        "28",
+        0
+      ]
+    },
+    "class_type": "SDTurboScheduler"
+  },
+  "28": {
+    "inputs": {
+      "lora_name": "pytorch_lora_weights.safetensors",
+      "strength_model": 1,
+      "strength_clip": 1,
+      "model": [
+        "20",
+        0
+      ],
+      "clip": [
+        "20",
+        1
+      ]
+    },
+    "class_type": "LoraLoader"
+  }
+}
