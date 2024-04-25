@@ -25,7 +25,8 @@ NEG_PROMPT_NODES=7,13
 RAND_SEED_NODES=17,20
 
 [LOCAL_IMG2IMG]
-CONFIG=comfyUI-workflows/img2img_config.json
+#CONFIG=comfyUI-workflows/img2img_config.json
+CONFIG=comfyUI-workflows/fast_img2img_config.json
 PROMPT_NODES=2
 NEG_PROMPT_NODES=3
 RAND_SEED_NODES=4
